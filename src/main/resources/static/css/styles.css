@@ -353,7 +353,41 @@
   }
 }
 
-@media (max-width: 380px) {
+/* Keep desktop layout unchanged */
+@media (min-width: 621px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+    min-height: 680px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    overflow: visible;
+  }
+
+  .hero-visual {
+    width: 100%;
+    height: auto;
+    min-height: 370px;
+    margin: 0;
+    overflow: visible;
+    transform: none;
+  }
+
+  .hero-visual img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 28px;
+  }
+
+  .hero-visual .chip,
+  .hero-visual .float-chip,
+  .hero-visual .visual-tag {
+    display: block;
+  }
+}
   .section-shell {
     width: calc(100% - 28px);
   }
