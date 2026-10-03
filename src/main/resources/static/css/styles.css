@@ -374,6 +374,143 @@
 
   .hero-actions .button {
     width: 100%;
+    
     justify-content: center;
+  }
+}
+
+/* Final mobile layout refinements */
+@media (max-width: 620px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  .hero {
+    min-height: auto !important;
+    padding-top: 32px !important;
+    padding-bottom: 28px !important;
+    gap: 20px !important;
+    overflow: hidden;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-copy h1,
+  h1 {
+    font-size: clamp(34px, 8.5vw, 42px) !important;
+    line-height: 1.12 !important;
+    margin-bottom: 18px;
+  }
+
+  .hero-lead {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+  }
+
+  .hero-actions {
+    gap: 10px !important;
+  }
+
+  .hero-actions .button {
+    min-height: 44px;
+    padding: 11px 14px !important;
+    font-size: 13px !important;
+  }
+
+  .hero-visual {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    transform: none !important;
+  }
+
+  .hero-visual img {
+    display: block !important;
+    width: 145px !important;
+    height: 145px !important;
+    max-width: 145px !important;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 50% !important;
+    margin: 0 auto !important;
+  }
+
+  /* Hide every decorative label or graphic around the portrait */
+  .hero-visual .chip,
+  .hero-visual .float-chip,
+  .hero-visual .visual-tag,
+  .hero-visual .orbit,
+  .hero-visual .visual-grid,
+  .hero-visual [class*="chip"],
+  .hero-visual [class*="tag"] {
+    display: none !important;
+  }
+
+  .scroll-cue {
+    display: none !important;
+  }
+
+  .section-block {
+    padding-top: 42px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .section-shell {
+    width: calc(100% - 32px) !important;
+    max-width: 100% !important;
+  }
+
+  .about-grid,
+  .skill-grid,
+  .project-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .hero,
+  .hero-copy,
+  .hero-visual,
+  section,
+  .project-card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-visual img {
+    width: 125px !important;
+    height: 125px !important;
+    max-width: 125px !important;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .button {
+    width: 100%;
   }
 }
